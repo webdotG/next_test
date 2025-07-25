@@ -1,167 +1,119 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+/* === ДЕСКТОП БАЗА === */
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+body {
+  font-family: -apple-system, Roboto, sans-serif;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 3rem;
+  background-color: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
+h1,
+h2,
+h3 {
+  color: #1f2937;
+  margin-bottom: 0.5rem;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+h1 {
+  font-size: 2rem;
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
+h2 {
+  font-size: 1.75rem;
 }
 
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
+h3 {
+  font-size: 1.5rem;
 }
 
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
+p {
+  margin: 0.5rem 0 1rem;
+  font-size: 1rem;
 }
 
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
+label {
   font-weight: 500;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  background-color: white;
+  max-width: 400px;
 }
 
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
+input[type="range"] {
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
+button {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 0.5rem;
 }
 
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+button:hover {
+  background-color: #2563eb;
 }
 
-.footer img {
-  flex-shrink: 0;
+ul {
+  padding-left: 1.25rem;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
+li {
+  margin-bottom: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
+select {
+  appearance: none;
+}
+
+/* === ПЛАНШЕТ === */
+@media (max-width: 1023px) {
+  body {
+    padding: 2rem;
   }
 
-  .main {
-    align-items: center;
+  h1 {
+    font-size: 1.75rem;
   }
 
-  .main ol {
-    text-align: center;
+  h2 {
+    font-size: 1.5rem;
   }
 
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  h3 {
+    font-size: 1.25rem;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+/* === МОБИЛКА  === */
+@media (max-width: 639px) {
+  body {
+    padding: 1rem;
+  }
+
+  input,
+  select,
+  textarea {
+    max-width: 100%;
   }
 }
