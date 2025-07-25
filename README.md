@@ -4,6 +4,7 @@
 
 ###
 
+```
 src/
 ├── app/
 │ ├── layout.tsx
@@ -37,6 +38,7 @@ src/
 └── tableStore.ts
 
 7 directories, 24 files
+```
 
 ###
 
@@ -44,6 +46,7 @@ src/
 
 ###
 
+```
 src/
 ├── app/
 │ ├── layout.tsx # Общий layout
@@ -76,7 +79,8 @@ src/
 
 .css # Глобальные стили
 └── app/page.module.css # Стили страницы
-text
+
+```
 
 <!-- --START
 grant@home:~/projects/next_test/src$ tree -L 4
