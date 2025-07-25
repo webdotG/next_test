@@ -1,5 +1,84 @@
---START
+###
 
+### --START
+
+###
+
+src/
+├── app/
+│ ├── layout.tsx
+│ ├── mainTable/
+│ │ ├── confirm/
+│ │ │ └── page.tsx
+│ │ ├── Filters/
+│ │ │ ├── ColorFilter.tsx
+│ │ │ ├── CommentFilter.tsx
+│ │ │ ├── DeliveryFilter.tsx
+│ │ │ ├── DietaryFilter.tsx
+│ │ │ ├── FragilityFilter.tsx
+│ │ │ ├── HeightFilter.tsx
+│ │ │ ├── IdFilter.tsx
+│ │ │ ├── MaterialFilter.tsx
+│ │ │ ├── NameFilter.tsx
+│ │ │ ├── PackagingFilter.tsx
+│ │ │ ├── RaitingFilter.tsx
+│ │ │ ├── ShapeFilter.tsx
+│ │ │ ├── WeightFilter.tsx
+│ │ │ └── WidthFilter.tsx
+│ │ ├── FiltersActions.tsx
+│ │ ├── layout.tsx
+│ │ ├── MainTableComponent.tsx
+│ │ ├── page.tsx
+│ │ └── Preview.tsx
+│ └── page.module.css
+├── components/
+│ └── ConfirmModal.tsx
+└── store/
+└── tableStore.ts
+
+7 directories, 24 files
+
+###
+
+### --FULL
+
+###
+
+src/
+├── app/
+│ ├── layout.tsx # Общий layout
+│ ├── page.tsx # Главная страница (MainTableList)
+│ ├── mainTableItem/ # Модуль заказов
+│ │ ├── layout.tsx # Layout формы заказов
+│ │ ├── new/
+│ │ │ └── page.tsx # Создание заказа
+│ │ ├── [id]/
+│ │ │ └── page.tsx # Редактирование заказа
+│ │ └── components/
+│ │ ├── MainTableForm.tsx # Форма заказа (бывший MainTableComponent)
+│ │ ├── ConfirmModal.tsx # Модалка подтверждения
+│ │ ├── Filters/ # Все компоненты фильтров (12+ файлов)
+│ │ ├── FiltersActions.tsx # Управление фильтрами
+│ │ └── Preview.tsx # Превью фильтров
+├── components/
+│ └── MainTableList.tsx # Таблица списка заказов
+├── store/
+│ ├── filtersStore.ts # Состояние фильтров
+│ ├── ordersStore.ts # Список и сортировка заказов
+│ ├── authStore.ts # Данные пользователя
+│ └── modalStore.ts # Управление модалками
+├── lib/
+│ ├── types.ts # Типы данных
+│ ├── constants.ts # Константы и enum'ы
+│ └── utils.ts # Вспомогательные функции
+├── styles/
+│ └── globals
+
+.css # Глобальные стили
+└── app/page.module.css # Стили страницы
+text
+
+<!-- --START
 grant@home:~/projects/next_test/src$ tree -L 4
 .
 ├── app
@@ -79,4 +158,4 @@ src/
 │   └── utils.ts # утилиты для URL, преобразования и т.д.
 ├── styles/
 │   └── globals.css # глобальные стили
-└── app/page.module.css # если нужно
+└── app/page.module.css # если нужно -->
